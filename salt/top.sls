@@ -1,4 +1,4 @@
 base:
   '*':
-    - java
+    - sun-java 
     - cassandra

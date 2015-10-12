@@ -9,13 +9,10 @@ openjdk-8-jre-headless:
 
 cassandra_package:
   pkgrepo.managed:
-    - humanname: Cassandra Debian Repo
-    - name: deb http://debian.datastax.com/community stable main
-    - file: /etc/apt/sources.list.d/cassandra.sources.list
-    - key_url: http://debian.datastax.com/debian/repo_key
+    - humanname: Cassandra Centos Repo
+    - baseurl: http://rpm.datastax.com/community
   pkg.installed:
-    - name: {{ cassandra.package_name }}
-    - version: {{ cassandra.version }}
+    - name: { cassandra.package_name} 
 
 cassandra_configuration:
   file.managed:
